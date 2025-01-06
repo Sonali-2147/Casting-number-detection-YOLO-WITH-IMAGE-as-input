@@ -1,13 +1,5 @@
 # Casting-number-detection-YOLO-WITH-IMAGE-as-input
 
-
-
-Here is a README file for the provided code:
-
----
-
-# YOLOv8 + Tesseract for Number Detection and Text Recognition
-
 This Python project uses YOLOv8 for detecting regions containing numbers in an image and Tesseract OCR to extract and recognize those numbers. The detected regions are processed and bounding boxes with the recognized text are drawn on the output image.
 
 ## Requirements
@@ -42,7 +34,7 @@ Additionally, you need to install [Tesseract OCR](https://github.com/tesseract-o
 3. Run the Python script to perform object detection, text extraction, and display the results:
 
 ```bash
-python detect_and_recognize.py
+python app.py
 ```
 
 ## Code Breakdown
