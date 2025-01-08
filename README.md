@@ -7,7 +7,7 @@ This Python project uses YOLOv8 for detecting regions containing numbers in an i
 1. **Python 3.7+**
 2. **Libraries:**
    - OpenCV
-   - Ultralytics YOLOv8
+   - Ultralytics YOLOv5
    - Tesseract
    - pytesseract
    - NumPy
