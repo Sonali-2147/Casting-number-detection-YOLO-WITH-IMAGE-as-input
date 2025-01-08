@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import pytesseract
 
 # Load YOLOv8 model 
-model = YOLO('yolov8n.pt')
+model = YOLO('yolov5n.pt')
 
 # extract detected regions and recognize text
 def extract_and_recognize_numbers(image, results, box_reduction_factor=0.1, min_difference=5):
@@ -63,12 +63,12 @@ image_resized = cv2.resize(image, (640, 640))
 results = model(image_resized)
 
 # Extract regions containing numbers and recognize text
-detected_regions, bounding_boxes = extract_and_recognize_numbers(image, results, box_reduction_factor=0.1, min_difference=5)
+detected_regions, bounding_boxes = extract_and_recognize_numbers(image, results, box_reduction_factor=0.1, min_difference=4)
 
 # Draw bounding boxes around the detected regions
 for (x1, y1, x2, y2, text) in bounding_boxes:
-    cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
-    cv2.putText(image, f"Detected Numbers: {text}", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+    cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 3)
+    cv2.putText(image, f"Detected Numbers: {text}", (x1, y1 - 12), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
 # Display the result
 cv2.imshow("Detected Numbers and Text", image)
